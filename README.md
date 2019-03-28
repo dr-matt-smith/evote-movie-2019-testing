@@ -86,3 +86,35 @@ You could, of course, setup Codeception yourself from scratch using the files an
               PASSED 
         ```
     
+## Configuring for _your_ database
+    
+1. Database credentials 
+
+    - edit the credentials in file `codeception.yml` to match your database name / user / password
+    
+    ```yaml
+       dsn: 'mysql:host=localhost;dbname=evote'
+       user: 'root'
+       password: 'passpass'
+       dump: 'tests/_data/dump.sql'
+    ```
+    
+1. SQL dump:
+
+    - create / copy the SQL to create your database tables, and insert initial fixtures test data as file to match the `dump` configuration location
+    
+    - i.e. `tests/_data/dump.sql` 
+    
+    - in most cases this will be the same as the contents of your `/db` folder, if you have been following Matt's examples ...
+    
+That's it - you should now have a Codeception configuration that will reset the database to match your `dump` SQL contents before each test is ruin
+
+
+NOTE: Since testing involves resetting the database each time, it is common practice to use a DIFFERENT database schema for your testing, than your **live** website database. You can do this easily, just change the name of the datanase in the `dsn` configuration, e.g. add the suffix `test`:
+
+    ```yaml
+       dsn: 'mysql:host=localhost;dbname=evotetest'
+    ```
+
+    
+    
