@@ -1,0 +1,21 @@
+paths:
+    tests: tests
+    output: tests/_output
+    data: tests/_data
+    support: tests/_support
+    envs: tests/_envs
+actor_suffix: Tester
+extensions:
+    enabled:
+        - Codeception\Extension\RunFailed
+modules:
+    enabled:
+    - Db:
+          dsn: 'mysql:host=localhost;dbname=evote'
+          user: 'root'
+          password: 'passpass'
+          dump: 'tests/_data/dump.sql'
+          populate: true
+          cleanup: true
+          reconnect: true
+          waitlock: 10
