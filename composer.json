@@ -5,7 +5,8 @@
     }
   },
   "require": {
-    "mattsmithdev/pdo-crud-for-free-repositories": "^0.9"
+    "mattsmithdev/pdo-crud-for-free-repositories": "^0.9",
+    "codeception/codeception": "^2.5"
   },
   "scripts": {
     "run": "php -S localhost:8000 -t public"

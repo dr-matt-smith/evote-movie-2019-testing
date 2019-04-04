@@ -12,14 +12,14 @@ require_once __DIR__ . '/../_header.php';
 
     <p>
         Title:
-        <input name="title">
+        <input name="title" id="title">
 
     <p>
         Price:
-        <input name="price">
+        <input name="price" id="price">
 
     <p>
-        <input type="submit">
+        <input type="submit" value="Submit">
 
 </form>
 

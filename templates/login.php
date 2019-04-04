@@ -17,10 +17,10 @@ endif;
 
     <p>
     Username:
-    <input name="username">
+    <input name="username" id="username">
     <p>
         Password:
-        <input type="password" name="password">
+        <input type="password" name="password" id="password">
 
     <p>
     <input type="submit" value="LOGIN">

@@ -63,11 +63,25 @@ switch ($action){
         break;
 
     case 'createNewMovie':
-        $adminController->createNewMovie();
+        if(isset($_SESSION['username'])){
+            $adminController->createNewMovie();
+        } else {
+            $errors = [
+                'you attempted an unauthroised acitonn'
+            ];
+            require_once __DIR__ . '/../templates/error.php';
+        }
         break;
 
     case 'deleteMovie':
-        $adminController->deleteMovie();
+        if(isset($_SESSION['username'])){
+            $adminController->deleteMovie();
+        } else {
+            $errors = [
+                'you attempted an unauthroised acitonn'
+            ];
+            require_once __DIR__ . '/../templates/error.php';
+        }
         break;
 
     case 'editMovie':

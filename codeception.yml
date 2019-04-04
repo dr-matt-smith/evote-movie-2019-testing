@@ -10,12 +10,12 @@ extensions:
         - Codeception\Extension\RunFailed
 modules:
     enabled:
-    - Db:
-          dsn: 'mysql:host=localhost;dbname=evote'
-          user: 'root'
-          password: 'passpass'
-          dump: 'tests/_data/dump.sql'
-          populate: true
-          cleanup: true
-          reconnect: true
-          waitlock: 10
+        - Db:
+              dsn: 'mysql:host=localhost;dbname=evote'
+              user: 'root'
+              password: 'passpass'
+              dump: 'tests/_data/dump.sql'
+              populate: true
+              cleanup: true
+              reconnect: true
+              waitlock: 10
